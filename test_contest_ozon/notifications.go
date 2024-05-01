@@ -14,14 +14,15 @@ func Notifications() {
 	defer out.Flush()
 
 	var notificationID = 0
+	var globalNotification = 0
 
 	var usersCount, requestsCount int
 	fmt.Fscan(in, &usersCount, &requestsCount)
 
-	userNotificationMap := map[int][]int{}
+	userNotificationMap := make([]int, usersCount+1)
 
 	for i := 1; i <= usersCount; i++ {
-		userNotificationMap[i] = []int{0}
+		userNotificationMap[i] = 0
 	}
 
 	for i := 0; i < requestsCount; i++ {
@@ -32,15 +33,16 @@ func Notifications() {
 		if requestType == 1 {
 			notificationID++
 			if userID == 0 {
-				for key, val := range userNotificationMap {
-					userNotificationMap[key] = append(val, notificationID)
-				}
+				globalNotification = notificationID
 			} else {
-				userNotificationMap[userID] = append(userNotificationMap[userID], notificationID)
+				userNotificationMap[userID] = notificationID
 			}
 		} else {
-			userNotifications := userNotificationMap[userID]
-			fmt.Fprintln(out, userNotifications[len(userNotifications)-1])
+			if globalNotification > userNotificationMap[userID] {
+				fmt.Fprintln(out, globalNotification)
+			} else {
+				fmt.Fprintln(out, userNotificationMap[userID])
+			}
 		}
 	}
 }
