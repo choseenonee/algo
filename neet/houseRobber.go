@@ -1,34 +1,34 @@
 package neet
 
-import "slices"
-
 func Rob(nums []int) int {
 	if len(nums) == 1 {
 		return nums[0]
 	} else if len(nums) == 3 {
 		return max(nums[0]+nums[2], nums[1])
+	} else if len(nums) == 2 {
+		return max(nums[0], nums[1])
+	} else if len(nums) == 4 {
+		return max(nums[0]+max(nums[2], nums[3]), nums[1]+nums[3])
 	}
 
-	base := []int{0, 1}
-
-	var answers []int
-	for _, curr := range base {
-		ans := nums[curr]
-		for i := curr; i <= len(nums)-3; i++ {
-			if curr == len(nums)-3 {
-				ans += nums[len(nums)-1]
-				break
-			}
-			if nums[curr+2] >= nums[curr+3] {
-				curr += 2
-				ans += nums[curr]
-			} else {
-				curr += 3
-				ans += nums[curr]
-			}
+	dp := make([]int, len(nums))
+	dp[0] = nums[0]
+	dp[1] = nums[1]
+	for idx, val := range nums {
+		if idx == 2 {
+			dp[idx] = val + dp[0]
+			continue
 		}
-		answers = append(answers, ans)
+		if idx == 3 {
+			dp[idx] = val + max(dp[1], dp[0])
+			continue
+		}
+		if idx < 3 {
+			continue
+		}
+		dp[idx] = val + max(dp[idx-2], dp[idx-3])
 	}
 
-	return slices.Max(answers)
+	// slices.Max(dp)
+	return max(dp[len(dp)-1], dp[len(dp)-2])
 }

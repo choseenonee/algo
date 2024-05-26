@@ -12,5 +12,5 @@ func main() {
 	//test_contest_ozon.Virus()
 
 	//other.Decrypt()
-	fmt.Println(neet.Rob([]int{1, 2, 1, 1}))
+	fmt.Println(neet.Rob([]int{4, 1, 2, 7, 5, 3, 1}))
 }
