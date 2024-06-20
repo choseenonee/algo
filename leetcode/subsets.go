@@ -1,4 +1,4 @@
-package neet
+package leetcode
 
 //func subsets(nums []int) [][]int {
 //	n := int(math.Pow(2.0, float64(len(nums))))

@@ -1,4 +1,4 @@
-package neet
+package leetcode
 
 import "math"
 

@@ -1,4 +1,4 @@
-package neet
+package leetcode
 
 func minCostClimbingStairs(cost []int) int {
 	dp := make([]int, len(cost))

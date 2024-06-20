@@ -1,4 +1,4 @@
-package neet
+package leetcode
 
 func Rob(nums []int) int {
 	if len(nums) == 1 {
