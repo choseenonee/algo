@@ -31,19 +31,23 @@ func main() {
 	//fmt.Println(10, leetcode.SubarraySum([]int{-1, -1, 1}, 0))
 	//fmt.Println(leetcode.SubarraySumSmart([]int{15, 10000, 1}, 16))
 	//fmt.Println(leetcode.IsPalindrome("A man, a plan, a canal: Panama"))
-	a := []int{0, 1, 0, 3, 12}
-	leetcode.MoveZeroes(a)
-	fmt.Println(a)
-	a = []int{0}
-	leetcode.MoveZeroes(a)
-	fmt.Println(a)
-	a = []int{0, 1}
-	leetcode.MoveZeroes(a)
-	fmt.Println(a)
-	a = []int{1, 2}
-	leetcode.MoveZeroes(a)
-	fmt.Println(a)
-	a = []int{1, 0}
-	leetcode.MoveZeroes(a)
-	fmt.Println(a)
+	//a := []int{0, 1, 0, 3, 12}
+	//leetcode.MoveZeroes(a)
+	//fmt.Println(a)
+	//a = []int{0}
+	//leetcode.MoveZeroes(a)
+	//fmt.Println(a)
+	//a = []int{0, 1}
+	//leetcode.MoveZeroes(a)
+	//fmt.Println(a)
+	//a = []int{1, 2}
+	//leetcode.MoveZeroes(a)
+	//fmt.Println(a)
+	//a = []int{1, 0}
+	//leetcode.MoveZeroes(a)
+	//fmt.Println(a)
+	fmt.Println(leetcode.GroupAnagrams([]string{"eat", "tea", "tan", "ate", "nat", "bat"}))
+	//mappa := map[[26]byte]int{[26]byte{1}: 0}
+	//fmt.Println(mappa[[26]byte{1}])
+	//fmt.Println([26]byte{26} == [26]byte{26})
 }
