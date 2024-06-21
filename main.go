@@ -29,5 +29,6 @@ func main() {
 	//fmt.Println(8, leetcode.SubarraySum([]int{3, 4, 3}, 7))
 	//fmt.Println(9, leetcode.SubarraySum([]int{1, 2, 3}, 3))
 	//fmt.Println(10, leetcode.SubarraySum([]int{-1, -1, 1}, 0))
-	fmt.Println(leetcode.SubarraySumSmart([]int{15, 10000, 1}, 16))
+	//fmt.Println(leetcode.SubarraySumSmart([]int{15, 10000, 1}, 16))
+	fmt.Println(leetcode.IsPalindrome("A man, a plan, a canal: Panama"))
 }
