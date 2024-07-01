@@ -47,5 +47,6 @@ func main() {
 	//mappa := map[[26]byte]int{[26]byte{1}: 0}
 	//fmt.Println(mappa[[26]byte{1}])
 	//fmt.Println([26]byte{26} == [26]byte{26})
-	yandex_5_0.ATwo()
+	//yandex_5_0.ATwo()
+	yandex_5_0.BTwo()
 }
