@@ -1,6 +1,9 @@
 package main
 
-import yandex_5_0 "algo/yandex_5.0"
+import (
+	"algo/other"
+	"fmt"
+)
 
 func main() {
 	//test_contest_ozon.Stickers()
@@ -49,5 +52,10 @@ func main() {
 	//fmt.Println([26]byte{26} == [26]byte{26})
 	//yandex_5_0.ATwo()
 	//yandex_5_0.BTwo()
-	yandex_5_0.CTwo()
+	//yandex_5_0.CTwo()
+	//yandex_5_0.DTwo()
+	//yandex_5_0.ETwo()
+	//fmt.Println(leetcode.Subsets([]int{1, 2, 3}))
+	//yandex_contest.B()
+	fmt.Println(other.Reverse([]int{6, 7, 8, 9, 10}))
 }

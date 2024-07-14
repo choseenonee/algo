@@ -20,14 +20,14 @@ package leetcode
 //}
 
 // prettier solution, backtracking algo
-func subsets(nums []int) [][]int {
+func Subsets(nums []int) [][]int {
 	var result [][]int
 	var curr []int
 
 	var explore func(int)
 	explore = func(idx int) {
 		if idx == len(nums) {
-			subset := make([]int, 0, len(curr))
+			subset := make([]int, len(curr))
 			copy(subset, curr)
 			result = append(result, subset)
 			return
